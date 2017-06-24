@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/speechkitt.min.js"></script>
+</head>
+<body>
+  <!--<pre class="lang:default decode:true">-->
+    <script>
+if (annyang) {
+  var commands = {
+    'hello': function() { alert('Hello world!'); }
+  };
+
+  annyang.addCommands(commands);
+
+  // Tell SpeechKITT to use annyang
+  SpeechKITT.annyang();
+  // Define a stylesheet for KITT to use
+  SpeechKITT.setStylesheet('https://cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/themes/flat.css');
+  // Render KITT's interface
+  SpeechKITT.vroom();
+}
+<!--$( "#target" ).focus(function() {-->
+  <!--alert( "Handler for .focus() called." );-->
+<!--});-->
+</script>
+</body>
+</html>
